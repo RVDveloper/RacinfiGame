@@ -19,6 +19,6 @@ jobs:
           
       - name: Push to itch.io
         run: |
-          butler push build RVDveloper/Racingfi:web --userversion ${{ github.sha }}
+            butler push build rvdveloper/racingfi:web --userversion ${{ github.sha }}
         env:
-          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+            BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
