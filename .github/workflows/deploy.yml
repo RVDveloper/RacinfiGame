@@ -9,15 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Upload to itch.io
-        uses: manleydev/butler-publish-itchio-action@v1.0.0
+        uses: itchyny/butler-action@v1.3.0  # ¡Versión más reciente!
         with:
-          butlerApiKey: ${{ secrets.BUTLER_API_KEY }}
-          username: RVDveloper  # Cambia esto
-          game: Racinfi       # Cambia esto
-          version: ${{ github.sha }}
+          butler-api-key: ${{ secrets.BUTLER_API_KEY }}
+          user: RVDveloper
+          game: Racinfi
+          directory: build
           channel: web
-          zip: false
-          directory: Build      # Asegúrate que coincide con tu ruta
