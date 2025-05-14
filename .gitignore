@@ -1,0 +1,6 @@
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uilds/         # Excepto la build WebGL que sí quieres subir
+.obj/
+*.csproj
+*.sln
